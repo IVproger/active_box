@@ -1,0 +1,435 @@
+/* Общие стили для всех элементов */
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    color: #6c7279;
+    margin: 0;
+    background-color: #fff;
+  
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+p {
+    margin: 0, 0, 10px 0;
+}
+
+/* Расчет размеров блоков для все элементов */
+*,
+*:before,
+*:after
+{
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Шапка и навигация */ 
+.header {
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+}
+
+.header__iner {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #505569;
+    padding: 35px 0;
+    align-items: center;
+
+}
+
+.nav {
+    display: flex;
+    font-size: 13px;
+    font-weight: 700;
+
+}
+
+.nav__link {
+    color: #fff;
+    margin-left: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    opacity: .75;
+    transition: opacity .1s linear;
+}
+
+.nav__link:first-child {
+    margin-left: 0;
+}
+
+.nav__link:hover {
+    opacity: 1;
+
+}
+
+/* Заголовок */
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 750px;
+    background: #30334d url("img/Layer\ 34.jpg") center no-repeat / cover;
+    padding-top: 100px;
+    text-align: center;
+
+}
+.intro__iner {
+    max-width: 970px;
+    width: 100%;
+    margin: 0 auto;
+
+}
+.intro__title {
+    font-family: "Open Sans", sans-serif;
+    font-size: 65px;
+    color: #fff;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.intro__subtitle {
+    color: #fff;
+    font-size: 22px;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-bottom: 60px;
+
+
+}
+
+/* Кнопка */
+.bth {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 14px 40px;
+    border-radius: 3px;
+    font-family: 'Raleway', sans-serif;
+    border: 0;
+    cursor: pointer;
+    transition: background .1s linear;
+    text-align: center;
+
+}
+
+.bth--red {
+    background-color: #e84545;
+   
+}
+
+.bth--red:hover {
+    background-color: #be1e1e;
+}
+
+.bth--long {
+    min-width: 280px;
+}
+
+/* Преимущества */
+.features {
+    display: flex;
+    margin: 100px 0;
+    flex-wrap: wrap;
+}
+
+.features__item {
+    width: 33.3333%;
+    text-align: center;
+    padding: 0 20px;
+    margin: 25px 0;
+}
+.features__icon {
+    margin-bottom: 20px;
+}
+
+.features__title {
+    margin-bottom: 22px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #3b3e41;
+    text-transform: uppercase;
+
+}
+
+.features__text {
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+/* Работы */
+
+.works {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.work_item {
+    width: 25%;
+    height: 350px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff;;
+    
+}
+.work_item:hover .worls_content {
+    opacity: 1;
+    transition: opacity .2s linear;
+}
+.works_photo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate3d(-50%,-50%,0);
+
+
+}
+
+.worls_content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(232, 69, 69, 0.9);
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+}
+.works_title {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.works_text {
+    font-size: 14px;
+    color: #fff;
+
+}
+/* Команда */
+
+.team {
+    margin: 100px 0 70px;
+}
+.team_inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.team_item {
+    width: 25%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+.team_photo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #6c7279;
+    margin-bottom: 20px;
+}
+
+.team_name {
+    color: #2d3033;
+    margin-bottom: 8px;
+    font-size: 22px;
+}
+
+.profession {
+    color: red;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.team_text {
+    color: #6c7279;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+/*  Социальные сети */
+.social {
+    display: flex;
+}
+
+.social--footer {
+    justify-content: center;
+}
+
+.social_item {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e8ecee;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4px;
+    
+    
+    
+
+}
+
+.social_item:hover {
+    box-shadow: 5px 5px #6c7279;
+
+}
+
+.fot_it:hover {
+    box-shadow: 5px 5px #fff;
+}
+
+/* Отзывы */
+
+.Feedback {
+    background-color: #53354a;
+    overflow: hidden;
+}
+
+.reviews_item {
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+
+.reviews__photo {
+    width: 50%;
+    height: 500px;
+    position: relative;
+}
+.reviews_img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+.reviews__content {
+    display: flex;
+    width: 50%;
+    padding-left: 80px;
+    flex-direction: column;
+    justify-content: center;
+}
+.reviews_text {
+    font-family: "Cardo", sans-serif;
+    font-size: 36px;
+    font-style: italic;
+    line-height: 1.2;
+    color: #fff;
+    margin-bottom: 25px;
+}
+.reviews_author {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+
+}
+
+/* Загрузка */
+
+.download {
+    text-align: center;
+    margin: 90px 0;
+}
+
+.download_title {
+    font-size: 28px;
+    color: #2d3033;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.download_subtitle {
+    font-size: 13px;
+    color: #2d3033;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+
+}
+/* Подвал */
+.footer {
+    background-color: #3a3e64;
+}
+
+.footer_inner {
+    padding: 70px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer_block {
+    width: 33.333333%;
+    text-align: center;
+    padding: 0 15px;
+}
+.footer_title {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.footer_address {
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.ic_t {
+    border: 2px solid #fff;
+    border-radius: 2px;
+}
+
+
+/* Коопирайтинг  */
+.footer_copyright {
+    background-color: #313454;
+    padding: 20px 0;
+}
+.copyright_text {
+    text-align: center;
+    color: #808080;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+span {
+    color: #fff;
+}
